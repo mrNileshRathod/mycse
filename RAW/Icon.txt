@@ -1,8 +1,0 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
-
-<i class="fa fa-file-code-o" style="font-size:24px"></i>
-<i class="fa fa-file-photo-o" style="font-size:24px"></i>
-<i class="fa fa-file-pdf-o" style="font-size:24px"></i>
