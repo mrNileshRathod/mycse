@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="laoder1.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="laodfunction()">
+    <div class="loader" id="load">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, maxime suscipit. Alias minima, rerum cum quas
+        maiores quis consectetur voluptas hic aspernatur impedit fuga quaerat. Ad necessitatibus temporibus illo vel.
+    </p>
+    <script type="text/javascript">
+        var preloader = document.getElementById('load');
+        function laodfunction() {
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="load.css">
+    </head>
+    <body onload="laodfunction()">
+       <!-- Loader -->
+       <div id="loader">
+        <div class="im">
+            <img src="image/cs.gif" alt="" >
+        </div>
+       </div>
+       <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta error eius porro illum velit iusto incidunt illo amet alias asperiores ea repellendus, non voluptates ullam sapiente praesentium officiis sed?</h1>
+        <script>
+            var preloader = document.getElementById('loader');
+            function laodfunction(){
+                setTimeout(function(){
+                    preloader.style.display='none';
+                },10000);
+            }
+            // function laodfunction(){
+            //     preloader.style.display = 'none'; 
+            // }
+        //    <script type="text/javascript">
+        //        $(document).ready(function() {
+        //        $('#body').show();
+        //        $('#msg').hide();
+        // });
+        </script>
+    </body>
+</html>
