@@ -36,6 +36,7 @@ hr{
     border: 2px solid black;
     border-collapse: collapse;
 }
+
 @media (max-width: 767.98px) { 
     .task table{
         width: 100%;
