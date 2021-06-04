@@ -22,3 +22,22 @@ img{
 hr{
     border-top: 4px solid orange;
 }
+
+.task table{
+    width: 35%;
+}
+
+.task h5{
+   font-size: 1.25em;
+   font-weight: 600;
+}
+
+.task th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+@media (max-width: 767.98px) { 
+    .task table{
+        width: 100%;
+    }
+}
