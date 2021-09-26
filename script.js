@@ -19,6 +19,9 @@ window.onload = (event) => {
         else if(index==0 && item == 'sixth'){
             window.location.href = '6th sem/index.html';
         }
+        else if(index==0 && item == 'seven'){
+            window.location.href = '7th sem/index.html';
+        }
     });
 
   };
@@ -58,6 +61,25 @@ sixthSem.addEventListener('click', ()=>{
         console.log('in the loop')
         if(index==0 && item == 'sixth'){
             window.location.href = '6th sem/index.html';
+        }
+    });
+})
+
+sevenSem.addEventListener('click', ()=>{
+    
+    if (webtask == null) {
+        taskObj = [];
+    }
+    else {
+        taskObj = JSON.parse(webtask);
+    }
+    taskObj.push('seven');
+    localStorage.setItem("localTask", JSON.stringify(taskObj));
+    
+    taskObj.forEach((item, index) => {
+        console.log('in the loop')
+        if(index==0 && item == 'seven'){
+            window.location.href = '7th sem/index.html';
         }
     });
 })
