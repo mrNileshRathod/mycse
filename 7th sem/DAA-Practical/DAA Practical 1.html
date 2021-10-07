@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" >
+        <link rel="stylesheet" href="../css/back_button.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/agate.min.css">
+        <title>DAA 1</title>
+    </head>
+    <body
+        style="background: #f0eeee;"
+        oncontextmenu="return false"
+        onkeydown="return false;"
+        onmousedown="return false;"
+    >
+        <div class="container">
+            <!-- put the link of previous page... -->
+            <!-- <button type="button" onclick="goBack()" class="btn btn-dark">Go Back</button> -->
+            <h4 class="p-title">
+                Program code
+            </h4>
+        </div>
+        <div class="container">
+            <!-- enter the code here (in code tag)dont give any extra spaces  -->
+            <div style="font-size: .9em;line-height: 1.5em;margin-bottom: 10px;">
+                <h6 style="margin-bottom: 30px;color: red;">
+                    *
+                    <u><b>Note : Please don't copy program as it</b></u>:
+                </h6>
+                <div class="code-me">
+                   <pre>
+<code class="language-c">
+<span>
+  #include&lt;stdio.h> 
+
+  void linearSearch(int a[],int n, int x) {	 
+    int i,t; 
+    for(i=0;i&lt;n;i++) { 
+      if(a[i]==x){ 
+        t=i; 
+        break; 
+        } 
+      } 
+    if(t!=0) 
+    printf("\nElement is found at location :%d",i+1); 
+    else 
+    printf("\nSorry !! Element is not found\n\n"); 
+    } 
+
+  void binarySerach(int a[],int n, int no){ 
+    int f=0; 
+    int l=n-1; 
+    int mid = (f+l)/2; 
+    
+    while(f&lt;=l) { 
+      if(a[mid]&lt;no) 
+        f=mid+1; 
+      else if(a[mid]==no) { 
+        printf("%d is found at %d \n",no,mid+1);	 
+        break; 
+        } 
+      else 
+        l=mid-1; 
+      
+      mid=(f+l)/2;     
+      } 
+    if(f>l) 
+      printf("Not found !"); 
+    } 
+
+  void main(){
+    int n,a[10],i,x,ch;
+    
+    printf("Enter the no of element:: ");
+    scanf("%d",&n);
+
+    for(i=0;i&lt;n;i++){
+      printf("Enter the array %d element :: ",i+1);
+      scanf("%d",&a[i]);
+      }
+    printf("\n");
+
+    do{
+      printf("\nEnter the serach element :: ");
+      scanf("%d",&x);
+
+      printf("\n\n0 Exit");
+      printf("\n1 Linear Search");	
+      printf("\n2 Binary Search");
+
+      printf("\n\nEnter the serach Chiose :: ");
+      scanf("%d",&ch);
+
+      if(ch==1){
+        printf("\nOutput by Linear Search: \n");
+        linearSearch(a,n,x);
+        }
+      else if(ch==2){
+        printf("\nOutput by Binary Search: \n");
+        binarySerach(a,n,x);
+        }
+
+      printf("\n");
+      }while(ch);
+
+    } 
+</span>
+</code></pre>
+            </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>
