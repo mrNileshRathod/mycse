@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" >
+        <link rel="stylesheet" href="../css/back_button.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/agate.min.css">
+        <title>DAA 3</title>
+    </head>
+    <body
+        style="background: #f0eeee;"
+        oncontextmenu="return false"
+        onkeydown="return false;"
+        onmousedown="return false;"
+    >
+        <div class="container">
+            <!-- put the link of previous page... -->
+            <!-- <button type="button" onclick="goBack()" class="btn btn-dark">Go Back</button> -->
+            <h4 class="p-title">
+                Program code
+            </h4>
+        </div>
+        <div class="container">
+            <!-- enter the code here (in code tag)dont give any extra spaces  -->
+            <div style="font-size: .9em;line-height: 1.5em;margin-bottom: 10px;">
+                <h6 style="margin-bottom: 30px;color: red;">
+                    *
+                    <u><b>Note : Please don't copy program as it</b></u>:
+                </h6>
+                <div class="code-me">
+                   <pre>
+<code class="language-c">
+<span>
+    #include&lt;stdio.h>
+    #define N 5
+
+    void swap(int *x, int *y) {
+        int t = *x;
+        *x = *y;
+        *y = t;	
+      }
+
+    void bubbleSort(int a[]) {
+        int sort = 0;
+        int i,j;
+        for(i=0;i&lt;N-1;i++){
+            for(j=0;j&lt;N-i-1;j++) {
+                if(a[j]>a[j+1]) {
+                    swap(&a[j], &a[j+1]);
+                    sort = 1;
+                  }
+              }
+            if(!sort) break;
+          }
+       }
+
+    void print(int a[]) {
+        int i;
+        
+        printf("\n\nSorted Array is :: ");
+        for(i=0;i&lt;N;i++)
+            printf("%d ",a[i]);
+      }
+
+    void main() {
+        int a[N], i;
+
+        printf("Enter the 5 elements : ");
+        for(i=0;i&lt;N;i++)
+            scanf("%d",&a[i]);
+
+        // Applying Bubble Sort Algorithm
+        bubbleSort(a);
+
+        // Printing Sorted Array
+        print(a);
+       }
+</span>
+</code></pre>
+            </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>
