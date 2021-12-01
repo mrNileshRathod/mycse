@@ -35,27 +35,24 @@
 <code class="language"><span>
     t=0:0.1:10
     s=sin(t)
+    subplot(4,2,1)
     plot(t,s)
-
-    t=0:0.1:10
-    s=cos(t)
-    plot(t,s)
-
-    t=0:0.1:10
-    s=tan(t)
-    plot(t,s)
-
-    t=0:0.1:10
-    s=sin(t)
+    subplot(4,2,2)
     stem(t,s)
-
-    t=0:0.1:10
-    s=cos(t)
-    stem(t,s)
-
-    t=0:0.1:10
-    s=tan(t)
-    stem(t,s)
+    
+    x=0:0.1:10
+    c=cos(x)
+    subplot(4,2,3)
+    plot(x,c)
+    subplot(4,2,4)
+    stem(x,c)
+    
+    y=0:0.1:10
+    a=tan(y)
+    subplot(4,2,5)
+    plot(y,a)
+    subplot(4,2,6)
+    stem(y,a)
 </span></code></pre>
             </div>
             </div>

@@ -40,34 +40,36 @@
     y=0
     end
     end
+    subplot(4,2,1)
     plot(n,y)
-
-    for n=-5:5
-    if n>=0
-    y=1
-    else
-    y=0
-    end
-    end
+    subplot(4,2,2)
     stem(n,y)
-
-    for n=-5:5
-    if n==0
-    y=1
+    
+    m=0:5
+    e=exp(m)
+    subplot(4,2,3)
+    plot(m,e)
+    subplot(4,2,4)
+    stem(m,e)
+    
+    p=0:5
+    r=p
+    subplot(4,2,5)
+    plot(p,r)
+    subplot(4,2,6)
+    stem(p,r)
+    
+    for q=-5:5
+    if q==0
+    s=1
     else
-    y=0
+    s=0
     end
     end
-    plot(y,n)
-
-    for n=-5:5
-    if n==0
-    y=1
-    else
-    y=0
-    end
-    end
-    stem(y,n)
+    subplot(4,2,7)
+    plot(q,s)
+    subplot(4,2,8)
+    stem(q,s)
 </span></code></pre>
             </div>
             </div>
