@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" >
+        <link rel="stylesheet" href="../css/back_button.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/agate.min.css">
+        <title>DAA 5</title>
+    </head>
+    <body
+        style="background: #f0eeee;"
+        oncontextmenu="return false"
+        onkeydown="return false;"
+        onmousedown="return false;"
+    >
+        <div class="container">
+            <!-- put the link of previous page... -->
+            <!-- <button type="button" onclick="goBack()" class="btn btn-dark">Go Back</button> -->
+            <h4 class="p-title">
+                Program code
+            </h4>
+        </div>
+        <div class="container">
+            <!-- enter the code here (in code tag)dont give any extra spaces  -->
+            <div style="font-size: .9em;line-height: 1.5em;margin-bottom: 10px;">
+                <h6 style="margin-bottom: 30px;color: red;">
+                    *
+                    <u><b>Note : Please don't copy program as it</b></u>:
+                </h6>
+                <div class="code-me">
+                   <pre>
+<code class="language-c">
+<span>
+    #include&lt;stdio.h>
+    #define V 4
+    #define INF 9999
+    
+    void display(int g[][V]){
+        int i,j;
+        printf("Output of Floyd Algorithm :: \n\n");
+        for(i=0;i&lt;V;i++){
+            for(j=0;j&lt;V;j++){
+                if(g[i][j] == INF){			
+                    printf("%6s","INF");
+                }
+                else{
+                    printf("%6d", g[i][j]);
+                }
+            }
+            printf("\n");
+        }
+    }
+    
+    void floydAlgo(int g[][V]){
+        int dist[V][V],i,j,k;
+        
+        for(i=0;i&lt;V;i++){
+            for(j=0;j&lt;V;j++){
+                dist[i][j] = g[i][j];
+            }
+        }
+        
+        for(k=0;k&lt;V;k++){
+            for(i=0;i&lt;V;i++){
+                for(j=0;j&lt;V;j++){
+                    if(dist[i][j] > dist[i][k] + dist[k][j])
+                        dist[i][j] = dist[i][k] + dist[k][j];
+                }
+            }	
+        }
+        display(dist);
+    }
+    
+    void main() {
+        int graph[V][V]={{0,5,INF,10},{INF,0,3,INF},{INF,0,1,INF},{INF,INF,INF,0}};
+        floydAlgo(graph);
+    }        
+</span>
+</code></pre>
+            </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>
