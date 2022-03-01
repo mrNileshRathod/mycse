@@ -1,5 +1,7 @@
 let fifthSem = document.getElementById('fifthSem');
 let sixthSem = document.getElementById('sixthSem');
+let sevenSem = document.getElementById('sevenSem');
+let eightsem = document.getElementById('eightsem');
 let webtask = localStorage.getItem("localTask");
 
 window.onload = (event) => {
@@ -80,6 +82,25 @@ sevenSem.addEventListener('click', ()=>{
         console.log('in the loop')
         if(index==0 && item == 'seven'){
             window.location.href = '7th sem/index.html';
+        }
+    });
+})
+
+eightsem.addEventListener('click', ()=>{
+    
+    if (webtask == null) {
+        taskObj = [];
+    }
+    else {
+        taskObj = JSON.parse(webtask);
+    }
+    taskObj.push('eight');
+    localStorage.setItem("localTask", JSON.stringify(taskObj));
+    
+    taskObj.forEach((item, index) => {
+        console.log('in the loop')
+        if(index==0 && item == 'eight'){
+            window.location.href = '8th sem/index.html';
         }
     });
 })
