@@ -1,7 +1,7 @@
 let fifthSem = document.getElementById('fifthSem');
 let sixthSem = document.getElementById('sixthSem');
 let sevenSem = document.getElementById('sevenSem');
-let eightsem = document.getElementById('eightsem');
+let eightsem = document.getElementById('eightSem');
 let webtask = localStorage.getItem("localTask");
 
 window.onload = (event) => {
