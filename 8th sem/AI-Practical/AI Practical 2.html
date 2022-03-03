@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/back_button.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/agate.min.css">
+    <title>AI 2</title>
+</head>
+
+<body style="background: #f0eeee;">
+    <div class="container">
+        <!-- put the link of previous page... -->
+        <!-- <button type="button" onclick="goBack()" class="btn btn-dark">Go Back</button> -->
+        <h4 class="p-title">
+            Program code
+        </h4>
+    </div>
+    <div class="container">
+        <!-- enter the code here (in code tag)dont give any extra spaces  -->
+        <div style="font-size: .9em;line-height: 1.5em;margin-bottom: 10px;">
+            <h6 style="margin-bottom: 30px;color: red;">
+                *
+                <u><b>Note : Please don't copy program as it</b></u>:
+            </h6>
+            <div class="code-me">
+                <pre>
+<code class="language-plaintext">
+<span>   /* Facts */
+    parent(ram,dashrath).
+    parent(ram,kaushalya).
+    parent(lakshman,dashrath).
+    parent(lakshman,kaushalya).
+    parent(luv, ram).
+    parent(luv, seeta).
+    parent(kush,ram).
+    parent(kush,seeta).
+     
+    male(dashrath).
+    male(ram).
+    male(lakshman).
+    male(luv).
+    male(kush).
+    
+    female(kaushalya).
+    female(seeta).
+    female(urmila).
+    
+    wife(dashrath,kaushalya).
+    wife(ram, seeta).
+    wife(lakshman,urmila).
+
+    /* Rules */
+    father(X,Y) :- parent(X,Y),male(Y).
+    mother(X,Y) :- parent(X,Y),female(Y).
+    grandparent(X,Y) :- parent(Z,Y),parent(X,Z).
+    paternalgrandfather(X,Y) :- father(Y,Z),father(Z,X).
+    sibling(X,Y) :- parent(X, Z), parent(Y, Z),X\=Y.
+    brothers(X,Y) :- sibling(X,Y),male(X),male(Y),X\=Y.
+    sisters(X,Y) :- sibling(X,Y),female(X),female(Y),X\=Y.
+    uncle(X,Y) :- father(X,F),brothers(F,Y).
+    aunt(X,Y) :- uncle(X,U), wife(U,Y).
+</span>
+</code></pre>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>
